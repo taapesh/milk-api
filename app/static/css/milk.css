@@ -85,8 +85,8 @@ td {
 	display: block;
 	text-decoration: none;
 	color: #CFD3DD;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	padding-left: 25px;
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
@@ -94,6 +94,8 @@ td {
 	transition: all .3s ease;
 	text-transform: uppercase;
 	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: .5px;
 }
 .side-nav a:hover {
 	color: white;
@@ -128,6 +130,9 @@ td {
 }
 .api-header {
 	margin-bottom: 30px;
+}
+.api-header i {
+	margin-right: 21px;
 }
 .endpoint {
 	margin-top: 10px;
