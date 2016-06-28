@@ -26,6 +26,7 @@ th, td {
 table {
 	margin-top: 20px;
 	width: 50%;
+	min-width: 200px;
 	border: 1px solid #CCC;
 }
 td {
