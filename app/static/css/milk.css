@@ -1,0 +1,163 @@
+html {
+	background: #2C3E50;
+	min-height:100%;/* make sure it is at least as tall as the viewport */
+	position:relative;
+}
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	height: 100%;
+}
+h1, h2, h3, h4 {
+	margin: 0;
+}
+h1, h2 {
+	color: #444;
+}
+p {
+	margin: 0;
+}
+table, td {
+	border: 1px solid #BBB;
+}
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+table {
+	margin-top: 20px;
+	width: 50%;
+	border: 1px solid #CCC;
+}
+td {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+.table-header {
+	font-weight: 600;
+}
+.doc-header {
+
+}
+.doc-header p {
+	color: #777;
+	margin-top: 10px;
+	padding-bottom: 25px;
+	font-weight: 600;
+}
+.nav-header {
+	height: 60px;
+	background: #2B2F3E;
+	text-align: center;
+}
+.nav-header h1 {
+	font-size: 20px;
+	letter-spacing: 2px;
+	margin: 0;
+	color: #EEE;
+	text-transform: uppercase;
+	line-height: 60px;
+}
+.nav-logo {
+	font-size: 20px;
+	display: inline-block;
+	line-height: 60px;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+.side-nav {
+	position: -webkit-sticky;
+	position: fixed;
+	top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+	width: 220px;
+	float: left;
+	background: #2C3E50;
+	border-right: 1px solid #222;
+	border-top: 1px solid #222;
+}
+.side-nav a {
+	display: block;
+	text-decoration: none;
+	color: #CFD3DD;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 25px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+.side-nav a:hover {
+	color: white;
+	background: #364d63;
+}
+.main-content {
+	padding-left: 270px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: #ECEFF2;
+}
+.api-section {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.code {
+	font-family: 'Inconsolata', Arial, sans-serif;
+}
+.method {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.api-section h2 {
+	font-size: 30px;
+	color: #555;
+	font-weight: 700;
+}
+.api-section h3 {
+	color: #555;
+	font-size: 20px;
+}
+.api-header {
+	margin-bottom: 30px;
+}
+.endpoint {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+.endpoint p {
+	margin-top: 12px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.endpoint h1 {
+	display: inline-block;
+	border: 1px solid #CCC;
+	font-size: 20px;
+	background: #EEE;
+	padding: 8px 18px;
+	border-radius: 3px;
+}
+.parameter {
+	color: #ff4d5e;
+}
+.get {
+	border-left: 4px solid #94D7BE !important;
+}
+.post {
+	border-left: 4px solid #59ABFD !important;
+}
+.put {
+	border-left: 4px solid #9999CC !important;
+}
+.delete {
+	border-left: 4px solid #FF828E !important;
+}

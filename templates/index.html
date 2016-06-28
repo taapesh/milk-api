@@ -1,0 +1,640 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>2% Milk API</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="static/css/normalize.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/milk.css">
+        <script src="static/js/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="content">
+            <div class="side-nav">
+                <div class="nav-header"><h1>Milk API</h1></div>
+                <a href="#user">User</a>
+                <a href="#post">Post</a>
+                <a href="#topic">Topic</a>
+                <a href="#subscription">Subscription</a>
+                <a href="#tag">Tag</a>
+                <a href="#reply">Reply</a>
+                <a href="#flag">Flag</a>
+                <a href="#search">Search</a>
+                <a href="#image">Image</a>
+                <a href="#auth">Authentication</a>
+            </div>
+
+            <div class="main-content">
+                <div class="doc-header">
+                    <h1>2% Milk API Documentation</h1>
+                    <p>Use the side navigation bar to jump to a particular API</p>
+                </div>
+                <hr>
+                <div id="user" class="api-section">
+                    <div class="api-header">
+                        <h2>User API</h2>
+                        <h3 class="code">/api/v1/users</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users</h1>
+                        <p>Get all users</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span></h1>
+                        <p>Get a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/posts</h1>
+                        <p>Get all posts by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/subscriptions</h1>
+                        <p>Get all subscriptions by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/replies</h1>
+                        <p>Get all replies by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/flags</h1>
+                        <p>Get all flags by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/likes</h1>
+                        <p>Get all likes by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/users/<span class="parameter">{id}</span>/dislikes</h1>
+                        <p>Get all dislikes by a user</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="put"><span class="method">PUT</span> /api/v1/users/<span class="parameter">{id}</span></h1>
+                        <p>Update a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/users/<span class="parameter">{id}</span></h1>
+                        <p>Delete a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/users/<span class="parameter">{id}</span>/posts</h1>
+                        <p>Delete all posts by a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/users/<span class="parameter">{id}</span>/subscriptions</h1>
+                        <p>Delete all subscriptions by a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/users/<span class="parameter">{id}</span>/replies</h1>
+                        <p>Delete all replies by a user</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="post" class="api-section">
+                    <div class="api-header">
+                        <h2>Post API</h2>
+                        <h3 class="code">/api/v1/posts</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts</h1>
+                        <p>Get all posts</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span></h1>
+                        <p>Get a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/tags</h1>
+                        <p>Get all tags of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/images</h1>
+                        <p>Get all images of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/flags</h1>
+                        <p>Get all flags of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/replies</h1>
+                        <p>Get all replies of a post</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/likes</h1>
+                        <p>Get all likes of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/posts/<span class="parameter">{id}</span>/dislikes</h1>
+                        <p>Get all dislikes of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/posts</h1>
+                        <p>Create a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/posts/<span class="parameter">{id}</span>/replies</h1>
+                        <p>Create a reply to a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/posts/<span class="parameter">{id}</span>/likes</h1>
+                        <p>Create a like for a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/posts/<span class="parameter">{id}</span>/dislikes</h1>
+                        <p>Create a dislike for a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/posts/<span class="parameter">{id}</span>/flags</h1>
+                        <p>Create a flag for a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="put"><span class="method">PUT</span> /api/v1/posts/<span class="parameter">{id}</span></h1>
+                        <p>Update a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/posts/<span class="parameter">{id}</span></h1>
+                        <p>Delete a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/posts/<span class="parameter">{id}</span>/replies</h1>
+                        <p>Delete all replies to a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/posts/<span class="parameter">{id}</span>/flags</h1>
+                        <p>Delete all flags of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/posts/<span class="parameter">{id}</span>/tags</h1>
+                        <p>Delete all tags of a post</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/posts/<span class="parameter">{id}</span>/images</h1>
+                        <p>Delete all images of a post</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="topic" class="api-section">
+                    <div class="api-header">
+                        <h2>Topic API</h2>
+                        <h3 class="code">/api/v1/topics</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/topics</h1>
+                        <p>Get all topics</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/topics/<span class="parameter">{id}</span></h1>
+                        <p>Get a topic</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/topics/<span class="parameter">{id}</span>/subscriptions</h1>
+                        <p>Get all subscriptions to a topic</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/topics</h1>
+                        <p>Create a topic</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/topics/<span class="parameter">{id}</span></h1>
+                        <p>Delete a topic</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/topics/<span class="parameter">{id}</span>/subscriptions</h1>
+                        <p>Delete all subscriptions to a topic</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="subscription" class="api-section">
+                    <div class="api-header">
+                        <h2>Subscription API</h2>
+                        <h3 class="code">/api/v1/subscriptions</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/subscriptions</h1>
+                        <p>Get all subscriptions</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/subscriptions/<span class="parameter">{id}</span></h1>
+                        <p>Get a subscription</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/subscriptions</h1>
+                        <p>Create a subscription</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/subscriptions/<span class="parameter">{id}</span></h1>
+                        <p>Delete a subscription</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="tag" class="api-section">
+                    <div class="api-header">
+                        <h2>Tag API</h2>
+                        <h3 class="code">/api/v1/tags</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/tags</h1>
+                        <p>Get all tags</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/tags/<span class="parameter">{id}</span></h1>
+                        <p>Get a tag</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/tags/<span class="parameter">{id}</span>/posts</h1>
+                        <p>Get all posts of a tag</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr>
+                <div id="reply" class="api-section">
+                    <div class="api-header">
+                        <h2>Reply API</h2>
+                        <h3 class="code">/api/v1/replies</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/replies</h1>
+                        <p>Get all replies</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/replies/<span class="parameter">{id}</span></h1>
+                        <p>Get a reply</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/replies/<span class="parameter">{id}</span>/flags</h1>
+                        <p>Get all flags of a reply</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="put"><span class="method">PUT</span> /api/v1/replies/<span class="parameter">{id}</span></h1>
+                        <p>Update a reply</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/replies/<span class="parameter">{id}</span></h1>
+                        <p>Delete a reply</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="flag" class="api-section">
+                    <div class="api-header">
+                        <h2>Flag API</h2>
+                        <h3 class="code">/api/v1/flags</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/flags</h1>
+                        <p>Get all flags</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/flags/<span class="parameter">{id}</span></h1>
+                        <p>Get a flag</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/flags/<span class="parameter">{id}</span></h1>
+                        <p>Delete a flag</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="search" class="api-section">
+                    <div class="api-header">
+                        <h2>Search API</h2>
+                        <h3 class="code">/api/v1/search</h3>
+                        <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/search</h1>
+                        <p>Search for content</p>
+                        <table>
+                            <tr>
+                                <th>Required Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>q</td>
+                                <td>The search term</td>
+                            </tr>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="image" class="api-section">
+                    <div class="api-header">
+                        <h2>Image API</h2>
+                        <h3 class="code">/api/v1/images</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/images</h1>
+                        <p>Get all images</p>
+                        <table>
+                            <tr>
+                                <th>Optional Parameters</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>limit</td>
+                                <td>Limit the number of results</td>
+                            </tr>
+                            <tr>
+                                <td>sortby</td>
+                                <td>Sort by a particular field</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="get"><span class="method">GET</span> /api/v1/images/<span class="parameter">{id}</span></h1>
+                        <p>Get an image</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/images/<span class="parameter">{id}</span></h1>
+                        <p>Delete an image</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="auth" class="api-section">
+                    <div class="api-header">
+                        <h2>Authentication API</h2>
+                        <h3 class="code">/api/v1/auth</h3>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/auth/register</h1>
+                        <p>Register a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/auth/login</h1>
+                        <p>Log in a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/auth/resetpass</h1>
+                        <p>Set a new password for a user</p>
+                    </div>
+                    <div class="endpoint">
+                        <h1 class="post"><span class="method">POST</span> /api/v1/auth/forgotpass</h1>
+                        <p>Send a reset password link to a user's email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="static/js/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+        <script src="static/js/init.js"></script>
+    </body>
+</html>
