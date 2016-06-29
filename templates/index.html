@@ -446,12 +446,20 @@
                         </table>
                     </div>
                     <div class="endpoint">
-                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/topics/<span class="parameter">{id}</span></h1>
-                        <p>Delete a topic</p>
+                        <h1 class="post"><span class="method">POST</span> /api/v1/topics/<span class="parameter">{id}</span>/subscriptions</h1>
+                        <p>Create a subscription to a topic</p>
+                        <table>
+                            <tr>
+                                <th>Authorization</th>
+                            </tr>
+                            <tr>
+                                <td>token</td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="endpoint">
-                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/topics/<span class="parameter">{id}</span>/subscriptions</h1>
-                        <p>Delete all subscriptions to a topic</p>
+                        <h1 class="delete"><span class="method">DELETE</span> /api/v1/topics/<span class="parameter">{id}</span></h1>
+                        <p>Delete a topic</p>
                     </div>
                 </div>
                 <hr>
@@ -481,18 +489,6 @@
                     <div class="endpoint">
                         <h1 class="get"><span class="method">GET</span> /api/v1/subscriptions/<span class="parameter">{id}</span></h1>
                         <p>Get a subscription</p>
-                    </div>
-                    <div class="endpoint">
-                        <h1 class="post"><span class="method">POST</span> /api/v1/subscriptions</h1>
-                        <p>Create a subscription</p>
-                        <table>
-                            <tr>
-                                <th>Authorization</th>
-                            </tr>
-                            <tr>
-                                <td>token</td>
-                            </tr>
-                        </table>
                     </div>
                     <div class="endpoint">
                         <h1 class="delete"><span class="method">DELETE</span> /api/v1/subscriptions/<span class="parameter">{id}</span></h1>
